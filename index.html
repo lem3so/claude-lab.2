@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Backrooms — Pool Rooms</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+    #view { display: block; width: 100vw; height: 100vh; object-fit: contain; background: #000; }
+    #hint { position: fixed; left: 0; right: 0; bottom: 18px; text-align: center; font: 13px/1.4 system-ui, sans-serif; color: #9aa; opacity: .7; pointer-events: none; }
+  </style>
+  <script type="importmap">
+    { "imports": { "three": "./node_modules/three/build/three.module.js", "gsap": "./node_modules/gsap/index.js" } }
+  </script>
+</head>
+<body>
+  <canvas id="view"></canvas>
+  <div id="hint">clique para ativar o som · espaço pausa</div>
+  <script>if (new URLSearchParams(location.search).has('capture')) document.getElementById('hint').remove();</script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
