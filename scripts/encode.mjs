@@ -8,7 +8,7 @@ import { spawnSync } from 'node:child_process';
 import { parseArgs, BUILD, ROOT } from './lib.mjs';
 import { FPS, DURATION, TOTAL_FRAMES } from '../src/config.js';
 
-const args = parseArgs({ frames: path.join(BUILD, 'frames'), step: 1, format: 'jpg', audio: path.join(BUILD, 'audio.wav'), out: path.join(ROOT, 'Backrooms_PoolRooms.mp4'), crf: 17, preset: 'slow' });
+const args = parseArgs({ frames: path.join(BUILD, 'frames'), step: 1, format: 'jpg', audio: path.join(BUILD, 'audio.wav'), out: path.join(ROOT, 'Backrooms_PoolRooms.mp4'), crf: 21, preset: 'slow' });   // crf 17 is visually the same but ~185 MB (film grain is expensive)
 const step = +args.step;
 const fps = FPS / step;
 const frames = path.resolve(args.frames);

@@ -10,7 +10,8 @@ Curta de terror psicológico em primeira pessoa (POV / found footage), **20 segu
 gerado inteiramente por código: **Three.js** (cena 3D, shaders, PBR), **GSAP** (linha do tempo e câmera) e
 **FFmpeg** (frames → MP4). Nenhum asset externo: geometria, texturas, cáusticas e a trilha sonora são procedurais.
 
-**Resultado final:** [`Backrooms_PoolRooms.mp4`](Backrooms_PoolRooms.mp4)
+**Resultado final:** [`Backrooms_PoolRooms.mp4`](Backrooms_PoolRooms.mp4) — H.264 High, 1920×1080, 60 fps, 1200 frames, 20,000 s,
+AAC estéreo 48 kHz, ~46 MB (≈18 Mbps, CRF 21). Aos 19,0 s a imagem vai a preto e o som é cortado.
 
 | | |
 |---|---|
@@ -53,8 +54,8 @@ node scripts/render.mjs --from 1020 --to 1140 --force # refaz só um trecho
 USE_GPU=1 npm run frames                              # usa a GPU em vez do rasterizador por software
 ```
 
-> A captura foi feita em Chromium *headless* com WebGL por software (SwiftShader): ~3 s por frame, cerca de 1 h para
-> o filme inteiro em 4 núcleos. Com GPU o mesmo código roda em tempo real.
+> A captura foi feita em Chromium *headless* com WebGL por software (SwiftShader): ~3–4 s por frame, cerca de 1 h 10 min
+> para o filme inteiro em 4 núcleos. Com GPU o mesmo código roda bem mais rápido.
 
 ## Como funciona
 
