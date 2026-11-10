@@ -1,0 +1,22 @@
+{
+  "name": "backrooms-pool-rooms",
+  "version": "1.0.0",
+  "description": "Backrooms — What if you fell into the Pool Rooms? 20s POV horror short rendered with Three.js + GSAP + FFmpeg.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "audio": "node scripts/audio.mjs",
+    "frames": "node scripts/render.mjs",
+    "encode": "node scripts/encode.mjs",
+    "stills": "node scripts/stills.mjs",
+    "build": "node scripts/audio.mjs && node scripts/render.mjs && node scripts/encode.mjs"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  }
+}
