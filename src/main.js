@@ -43,7 +43,8 @@ const aniso = Math.min(+(params.get('aniso') || 4), renderer.capabilities.getMax
 const tile = makeTileTextures({ aniso });
 const caustic = makeCausticTexture();
 const detail = makeWaterDetailNormal();
-const corridorTex = makeCorridorTextures({ aniso });
+// the corridor is seen at very shallow angles: give its fine-grained maps the full anisotropy
+const corridorTex = makeCorridorTextures({ aniso: Math.min(16, renderer.capabilities.getMaxAnisotropy()) });
 const plain = makePlainTextures();
 
 const POOL_AMB_SKY = new THREE.Color(0.20, 0.25, 0.26);

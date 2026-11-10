@@ -314,11 +314,11 @@ export function makeCorridorTextures({ aniso = 8 } = {}) {
   }, aniso);
 
   // painted wall: tired off-white with a yellow cast, roller texture
-  const wF = fbm(S, 160, 2, 211);
+  const wF = fbm(S, 40, 2, 211);
   const wM = fbm(S, 3, 5, 212);
   const wall = simpleSet(S, (x, y, i) => {
     const v = 0.955 + 0.05 * wM[i] + 0.03 * (wF[i] - 0.5);
-    return { c: [0.60 * v, 0.545 * v, 0.40 * v], h: wF[i] * 0.0011, rough: 0.82 + 0.1 * wM[i] };
+    return { c: [0.60 * v, 0.545 * v, 0.40 * v], h: wF[i] * 0.0016, rough: 0.82 + 0.1 * wM[i] };
   }, aniso);
 
   // acoustic drop ceiling: 2 x 2 tiles per repeat (repeat = 1.2 m), pin holes, T-bars
